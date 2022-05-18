@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debounce</title>
+</head>
+<body>
+    <button
+        style="margin: 50px 45%;"
+        onclick="debounce(main, 2000)"
+    >
+        Click Me
+    </button>
+</body>
+</html>
+
+<script>
+    function main() {
+        alert("clicked! Thank You");
+    }
+
+    let timer;
+    function debounce(func, delay) {
+        if(timer)
+            clearTimeout(timer);
+        timer = setTimeout(() => {
+            func();
+        }, delay)
+    }
+</script>
