@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throttle</title>
+</head>
+<body>
+    <button
+        style="margin: 50px 45%;"
+        onclick="throttle(main, 2000)"
+    >
+        Click Me
+    </button>
+</body>
+</html>
+
+<script>
+    function main() {
+        alert("clicked! Thank You");
+    }
+
+    let timer;
+    function throttle(func, delay) {
+        if(timer)
+            return;
+        timer=true;
+        setTimeout(() => {
+            func();
+            timer=false;
+        }, delay)
+    }
+</script>
