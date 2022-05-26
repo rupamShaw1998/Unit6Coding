@@ -1,0 +1,93 @@
+1. Give an example where call apply bind is. required?
+.call() or .apply() is required when you want to invoke the function immediately, and modify the context.
+ Call/apply call the function immediately, whereas .bind() method does not execute the function right away. 
+ Instead, it creates and returns a bound function that can be executed later.
+
+
+ 2. What is the difference between readFile and readFileSync?
+ readFileSync() is synchronous and blocks execution until finished. 
+ These return their results as return values. readFile() are asynchronous and return immediately while they function in the background. 
+ You pass a callback function which gets called when they finish.
+
+
+ 3. What does process in node.js mean?
+ Node.js provides the facility to get process information such as process id, architecture, platform, version, release, uptime, upu usage etc.
+  It can also be used to kill process, set uid etc. 
+ The process is a global object, an instance of EventEmitter, can be accessed from anywhere.
+
+
+4. Explain what node.js is?
+Node. js is a single-threaded, open-source, cross-platform runtime environment for building fast and scalable server-side and networking applications. 
+It runs on the V8 JavaScript runtime engine, and it uses event-driven, non-blocking I/O architecture, which makes it efficient and suitable for real-time applications.
+Node is useful for developing applications that require a persistent connection from the browser to the server and is often used for real-time applications such as chat, news feeds and web push notifications.
+
+
+5. What is the difference of JS from browser to JS on node.js?
+JavaScript is a simple programming language that runs in any browser JavaScript Engine.
+Whereas Node JS is an interpreter or running environment for a JavaScript programming language that holds many excesses, 
+it requires libraries that can easily be accessed from JavaScript programming for better use.
+
+
+6. Write three different ways to reverse a string in Javascript? a. using inbuilt method, b. iteratively, c. recursively
+
+const reverseString = (str) => {
+    return str.split('').reverse().join('');
+};
+
+reverseString('hello world!');
+// => !dlrow olleh
+
+//////////////////////////////////////////////////////////////////
+
+const reverseString = (str) => {
+    let reversed = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+    return reversed;
+};
+
+reverseString('hello world!');
+// => !dlrow olleh
+
+/////////////////////////////////////////////////////////////////////
+
+const reverseString = (str) => {
+    return str ? reverseString(str.substr(1)) + str[0] : str;
+};
+
+reverseString('hello world!');
+// => !dlrow olleh
+
+
+
+7. Write a program to check two objects are equal ( deep equal )?
+const obj1 = {
+        name: 'Ram',
+        age: 21
+    };
+  
+    const obj2 = {
+        name: 'Ram',
+        age: 21
+    };
+  
+    const haveSameData = function (obj1, obj2) {
+        const obj1Length = Object.keys(obj1).length;
+        const obj2Length = Object.keys(obj2).length;
+  
+        if (obj1Length === obj2Length) {
+            return Object.keys(obj1).every(
+                key => obj2.hasOwnProperty(key)
+                    && obj2[key] === obj1[key]);
+        }
+        return false;
+    }
+
+
+
+8. What is shallow equal?
+A function for performing a shallow comparison between two objects or arrays. 
+Two values have shallow equality when all of their members are strictly equal to the corresponding member of the other.
+
+
