@@ -1,0 +1,19 @@
+
+.App {
+  margin-left: 1%;
+  margin-bottom: 4%;
+}
+.comm * {
+   margin-right: 20px;
+   font-size: 14px;
+   color: rgb(48, 46, 46);
+}
+
+.container{
+  border-left: 3px solid gray;
+  padding-left: 7px;
+  
+}
+.top {
+  margin-top: 10px;
+}
