@@ -2,6 +2,7 @@ import { Sidebar } from "./Sidebar"
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getList } from "../redux/action";
+
 export const Summary = ()=>{
     const list = useSelector((store) => store.list);
     const dispatch = useDispatch();

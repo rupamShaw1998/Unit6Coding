@@ -1,0 +1,52 @@
+{
+  "country": [
+    {
+      "id": 1,
+      "country": "France"
+    },
+    {
+      "id": 2,
+      "country": "India"
+    },
+    {
+      "id": 3,
+      "country": "Iceland"
+    },
+    {
+      "id": 4,
+      "country": "Russia"
+    },
+    {
+      "id": 5,
+      "country": "Ukraine"
+    },
+    {
+      "id": 6,
+      "country": "Korea"
+    },
+    {
+      "id": 7,
+      "country": "Switzerland"
+    },
+    {
+      "id": 8,
+      "country": "Japan"
+    },
+    {
+      "id": 9,
+      "country": "Mexico"
+    },
+    {
+      "id": 10,
+      "country": "Israel"
+    }
+  ],
+  "cities": [
+    {
+      "id": 2,
+      "Country": "Sri Lanka",
+      "City": "Colombo",
+      "Population": "5,600,000"
+    }
+  ]
+}
