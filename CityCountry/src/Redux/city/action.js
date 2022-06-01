@@ -4,6 +4,7 @@ import axios from "axios";
 export const ADD_CITY = "ADD_CITY";
 export const SORTING = "SORTING";
 export const ORIGINAL = "ORIGINAL";
+export const FILTER_DATA = "FILTER_DATA";
 
 export const addCity = (data) => {
     return {
@@ -20,6 +21,12 @@ export const sorting = (data) => {
 export const original = (data) => {
     return {
         type: ORIGINAL,
+        payload: data
+    } 
+}
+export const filterData = (data) => {
+    return {
+        type: FILTER_DATA,
         payload: data
     } 
 }

@@ -39,6 +39,10 @@
     {
       "id": 10,
       "country": "Israel"
+    },
+    {
+      "country": "china",
+      "id": 11
     }
   ],
   "cities": [
@@ -47,6 +51,12 @@
       "Country": "Sri Lanka",
       "City": "Colombo",
       "Population": "5,600,000"
+    },
+    {
+      "Country": "India",
+      "City": "Kolkata",
+      "Population": "5555555",
+      "id": 3
     }
   ]
 }

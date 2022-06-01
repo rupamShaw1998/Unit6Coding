@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCityData, original, sorting, deleteCity } from '../Redux/city/action';
+import { getCityData, original, sorting, deleteCity, filterData } from '../Redux/city/action';
 import { useNavigate, Link } from 'react-router-dom';
 
 export const City = () => {
@@ -23,10 +23,13 @@ export const City = () => {
         else
             dispatch(original())
     }
+    const filterHandler = (e) => {
+        dispatch(filterData(e.target.value))
+    }
 
     return (
         <div>
-            <input type="text" onChange={(e) => setFilter(e.target.value)} placeholder='Filter by Country'/>
+            <input type="text" onInput={filterHandler} placeholder='Filter by Country'/>
             <button onClick={addCityHandler}>ADD CITY</button>
             <select onChange={sortHandler} name="" id="sort">
                 <option value="sel">--select--</option>
