@@ -1,15 +1,12 @@
 import { useState ,useEffect } from 'react'
-
 import './App.css'
 
 function App() {
-
 
   const [post, setpost] = useState([{}]);
   const [isFetching, setIsFetching] = useState(false);
   let [page , setPage] = useState(1)
   let limit = 5;
-
 
   const getpost = async () => {
     setIsFetching(true)
@@ -36,8 +33,6 @@ function App() {
       return;
     setIsFetching(true);
   }
-
- 
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
